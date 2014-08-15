@@ -38,11 +38,9 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  });
-
-function HeaderController($scope, $location) 
-{ 
-    $scope.isActive = function (viewLocation) { 
-        return viewLocation === $location.path();
+  })
+  .controller('HeaderController', function($scope, $location) {
+    $scope.isActive = function(route) {
+      return route === $location.path();
     };
-}
+  });
