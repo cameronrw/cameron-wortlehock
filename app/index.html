@@ -11,6 +11,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
@@ -20,23 +21,28 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container">
       <header class="header"ng-controller="HeaderController">
-        <ul class="nav nav-pills pull-right">
-          <li ng-class="{active:isActive('/')}"><a ng-href="#">Home</a></li>
-          <li ng-class="{active:isActive('/about')}"><a ng-href="#/about">About</a></li>
-          <li ng-class="{active:isActive('/work')}"><a ng-href="#/work">Work</a></li>
-          <li ng-class="{active:isActive('/contact')}"><a ng-href="#/contact">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">Cameron Wortlehock</h3>
+        <nav class="container">
+          <ul class="nav nav-pills">
+            <li ng-class="{active:isActive('/')}"><a ng-href="#">Home</a></li>
+            <li ng-class="{active:isActive('/about')}"><a ng-href="#/about">About</a></li>
+            <li ng-class="{active:isActive('/work')}"><a ng-href="#/work">Work</a></li>
+            <li ng-class="{active:isActive('/contact')}"><a ng-href="#/contact">Contact</a></li>
+          </ul>
+        </nav>
       </header>
-
       <div ng-view=""></div>
-
       <footer class="footer">
-        <p>Cameron Wortlehock 2014</p>
+        <div class="container">
+          <p class="pull-left">&copy; Cameron Wortlehock</p>
+          <ul class="nav nav-pills pull-right">
+            <li ng-class="{active:isActive('/')}"><a ng-href="#">Home</a></li>
+            <li ng-class="{active:isActive('/about')}"><a ng-href="#/about">About</a></li>
+            <li ng-class="{active:isActive('/work')}"><a ng-href="#/work">Work</a></li>
+            <li ng-class="{active:isActive('/contact')}"><a ng-href="#/contact">Contact</a></li>
+          </ul>
+        </div>
       </footer>
-    </div>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
